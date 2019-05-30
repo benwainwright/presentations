@@ -10,7 +10,6 @@ title: The Art of the SLO - Playback
 - **Service Level Indicator**
 - Defining reliability in terms of _things that users care about_
 
-
 # What should you measure
 - Don't overdo it
 - Ideally two or three SLOs per user Journey
