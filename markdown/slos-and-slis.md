@@ -105,11 +105,16 @@ title: The Art of the SLO - Playback
 
 > We have spent 29.5% of our error budget
 
-# Responding to error budgets
-- Budget is all spent? Engineering teams should focus on work that improves
-    reliability
-- Plenty left? **PLEASE BREAK STUFF! TAKE RISKS! GO CRAZY!**
-- Part of the role of SRE would be to shepard this
+# Error budgets
+## Budget is spent
+- Engineering teams should stop or reduce feature development
+- Instead there should be a focus on reliability work
+- e.g. Pick a post-mortem action from the backlog
+
+# Error budgets
+## Plenty Left
+- **PLEASE BREAK STUFF! TAKE RISKS! GO CRAZY!**
+- Part of the role of SRE would be to shephard this
 
 # Evaluating SLIs
 - SLIs should be measured against external indicators. E.g. twitter, support
