@@ -14,7 +14,7 @@ title: The Art of the SLO - Playback
 - Ratio of GOOD events to all valid events 
 
   ```
-  SLI = (all_valid_events / good_events) * 100
+  SLI = (good_events / all_valid_events) * 100
   ```
 
 # What is an SLI?
@@ -31,10 +31,19 @@ title: The Art of the SLO - Playback
 # What should you measure
 - Don't overdo it
 - Ideally two or three SLOs per user Journey
+- Group them if there are a number of similar journeys
 
 # Defining SLIS
 ## What is a good event?
 - A good event is an event that will make users happy!
+
+# Defining SLIS
+## What makes users happy?
+- Use data where possible, e.g:
+   - Previous experience
+   - Questionnaires
+   - Research
+   - Twitter
 
 # Defining SLIS
 ## Example - Latency
@@ -65,7 +74,6 @@ title: The Art of the SLO - Playback
   - If you miss your SLO, your users start to get **unhappy**
   - If you miss your SLA, you start giving **refunds**
 
-
 # Choosing an objective (SLO)
 - Try to pick a figure at which customers will start to
     become unhappy
@@ -87,11 +95,12 @@ title: The Art of the SLO - Playback
 # Error budgets
 ## Example
 
-    error_budget = 0.5
+    SLO = 99.5
+    error_budget = 100 - SLO
     all_valid_events = 81241
     bad_events = 120
 
-    (all_valid_events / 100) * 0.5 ~= 406
+    (all_valid_events / 100) * error_budget ~= 406
     (bad_events / 406) * 100 ~= 29.5
 
 > We have spent 29.5% of our error budget
