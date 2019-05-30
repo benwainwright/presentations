@@ -10,12 +10,6 @@ title: The Art of the SLO - Playback
 - **Service Level Indicator**
 - Defining reliability in terms of _things that users care about_
 
-# What is an SLI?
-- Ratio of GOOD events to all valid events 
-
-  ```
-  SLI = (good_events / all_valid_events) * 100
-  ```
 
 # What should you measure
 - Don't overdo it
@@ -28,11 +22,18 @@ title: The Art of the SLO - Playback
 - The "Holy trinity" is availability, latency and throughput
 - Perhaps correctness?
 
-# Do you want to measure correctness?
+# Correctness?
 - Correctness is **hard**
 - More or less appropriate depending on the service:
    - Payment providers need to get this right
    - Not so much search results
+
+# What is an SLI?
+- Ratio of GOOD events to all valid events 
+
+  ```
+  SLI = (good_events / all_valid_events) * 100
+  ```
 
 # What is an SLI?
 ## Example
@@ -152,3 +153,7 @@ title: The Art of the SLO - Playback
     with us reviewing our SLOs/SLIs
 - cre-slo-review@google.com
 - Need to provide a **service diagram** and **user journeys**
+
+# The End
+
+Any Questions?
