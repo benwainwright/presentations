@@ -1,6 +1,7 @@
 ---
 author: Ben Wainwright
 title: The Art of the SLO - Playback
+date: 30th May, 2019
 ---
 
 # What is an SLI?
