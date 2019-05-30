@@ -17,6 +17,23 @@ title: The Art of the SLO - Playback
   SLI = (good_events / all_valid_events) * 100
   ```
 
+# What should you measure
+- Don't overdo it
+- Ideally two or three SLOs per user Journey
+- Group them if there are a number of similar journeys
+
+# What should you measure 
+- We are request/response based systems (as opposed to data stores/processing
+    pipelines)
+- The "Holy trinity" is availability, latency and throughput
+- Perhaps correctness?
+
+# Do you want to measure correctness?
+- Correctness is **hard**
+- More or less appropriate depending on the service:
+   - Payment providers need to get this right
+   - Not so much search results
+
 # What is an SLI?
 ## Example
 **99.1%** SLI performance
@@ -27,11 +44,6 @@ title: The Art of the SLO - Playback
 
   (good_events / all_valid_events) * 100 = 99.1071429
   ```
-
-# What should you measure
-- Don't overdo it
-- Ideally two or three SLOs per user Journey
-- Group them if there are a number of similar journeys
 
 # Defining SLIS
 ## What is a good event?
@@ -57,7 +69,7 @@ title: The Art of the SLO - Playback
 ## What is a valid event?
 - Exclude particular classes of events...
 - Do we care about every request?
-- e.g. do we care about POST requests?
+- e.g. for the current slice, do we care about POST requests?
 
 > **Proportion of `GET` requests that take under 0.5 seconds vs all requests**
 
@@ -105,6 +117,12 @@ title: The Art of the SLO - Playback
 
 > We have spent 29.5% of our error budget
 
+# Responding to Error budgets
+- We should monitor our SLO performance/Error budget performance continuously to
+    take action before we miss the threshold
+- As we progress through our Error budget we may want to adjust Engineering
+    priorities accordingly
+
 # Error budgets
 ## Budget is spent
 - Engineering teams should stop or reduce feature development
@@ -113,8 +131,8 @@ title: The Art of the SLO - Playback
 
 # Error budgets
 ## Plenty Left
-- **PLEASE BREAK STUFF! TAKE RISKS! GO CRAZY!**
-- Part of the role of SRE would be to shephard this
+- **SPEND IT! INNOVATE! TAKE RISKS! GO CRAZY!**
+- Part of the role of SRE would be to shepherd this
 
 # Evaluating SLIs
 - SLIs should be measured against external indicators. E.g. twitter, support
@@ -128,3 +146,9 @@ title: The Art of the SLO - Playback
 - Not necessarilly alarming on internal metrics like CPU usage, disk space etc
 - Not necessarilly responding to all 500s/availability issues/outages
   - ... But having the information there when alerts DO happen
+
+# Need extra help?
+- If we run into problems Google have offered to spend at least **one hour**
+    with us reviewing our SLOs/SLIs
+- cre-slo-review@google.com
+- Need to provide a **service diagram** and **user journeys**
