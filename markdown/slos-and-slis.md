@@ -116,7 +116,7 @@ title: The Art of the SLO - Playback
     (all_valid_events / 100) * error_budget ~= 406
     (bad_events / 406) * 100 ~= 29.5
 
-> We have spent 29.5% of our error budget
+> We have spent **29.5%** of our error budget
 
 # Responding to Error budgets
 - We should monitor our SLO performance/Error budget performance continuously to
